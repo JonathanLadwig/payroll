@@ -1,0 +1,40 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  gap: 8px;
+  padding-top: 24px;
+  align-items: center;
+
+  a {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #dfe5ec;
+    }
+
+    span {
+      text-align: center;
+      font-family: Roboto;
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 10px;
+      leading-trim: NONE;
+      line-height: 12px;
+      letter-spacing: 0.5px;
+      text-transform: capitalize;
+    }
+  }
+}
