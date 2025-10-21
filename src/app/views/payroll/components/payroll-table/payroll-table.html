@@ -2,11 +2,16 @@
     <thead>
         <tr>
             <th></th>
-            <th [class.selected]="sort() === 'name'" (click)="onSort('name')">Name</th>
-            <th [class.selected]="sort() === 'name'" (click)="onSort('description')">Description</th>
-            <th [class.selected]="sort() === 'name'" (click)="onSort('type')">Type</th>
-            <th [class.selected]="sort() === 'name'" (click)="onSort('quantity')">Quantity</th>
-            <th [class.selected]="sort() === 'name'" (click)="onSort('rate')">Rate</th>
+            <th (click)="onSort('name')"><app-table-heading name="Name" [selected]="sort() === 'name'"
+                    [desc]="isDescending()" /></th>
+            <th (click)="onSort('description')"><app-table-heading name="Description"
+                    [selected]="sort() === 'description'" [desc]="isDescending()" /></th>
+            <th (click)="onSort('type')"><app-table-heading name="Type" [selected]="sort() === 'type'"
+                    [desc]="isDescending()" /></th>
+            <th (click)="onSort('quantity')"><app-table-heading name="Quantity" [selected]="sort() === 'quantity'"
+                    [desc]="isDescending()" /></th>
+            <th (click)="onSort('rate')"><app-table-heading name="Rate" [selected]="sort() === 'rate'"
+                    [desc]="isDescending()" /></th>
             <th></th>
         </tr>
     </thead>

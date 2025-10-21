@@ -1,0 +1,19 @@
+.table-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease;
+  }
+  .descending {
+    transform: rotate(180deg);
+  }
+  .hidden {
+    visibility: hidden;
+  }
+}

@@ -11,8 +11,9 @@ export class PayrollService {
   private readonly http: HttpClient = inject(HttpClient);
 
   private readonly filterTerm = signal('');
+
   readonly sortColumn = signal<keyof Earning>('name');
-  private readonly sortDirection = signal<'asc' | 'desc'>('asc');
+  readonly sortDirection = signal<'asc' | 'desc'>('asc');
 
   employeeData = rxResource<Employee, unknown>({
     stream: () =>
