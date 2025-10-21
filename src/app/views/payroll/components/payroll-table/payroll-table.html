@@ -1,21 +1,25 @@
 <table class="earnings-table">
     <thead>
         <tr>
+            <th></th>
             <th [class.selected]="sort() === 'name'" (click)="onSort('name')">Name</th>
             <th [class.selected]="sort() === 'name'" (click)="onSort('description')">Description</th>
             <th [class.selected]="sort() === 'name'" (click)="onSort('type')">Type</th>
             <th [class.selected]="sort() === 'name'" (click)="onSort('quantity')">Quantity</th>
             <th [class.selected]="sort() === 'name'" (click)="onSort('rate')">Rate</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         @for (earning of earnings(); track earning.name) {
         <tr>
+            <td></td>
             <td id="name">{{ earning.name }}</td>
             <td id="description">{{ earning.description }}</td>
             <td id="type">{{ earning.type }}</td>
             <td id="quantity">{{ earning.quantity }}</td>
             <td id="rate">{{ earning.rate }}</td>
+            <td></td>
         </tr>
         }
     </tbody>
