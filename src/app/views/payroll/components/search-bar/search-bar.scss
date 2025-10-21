@@ -1,0 +1,21 @@
+.search-bar {
+  display: flex;
+  width: 336px;
+  padding: 8px 12px;
+  border-radius: 28px;
+  background-color: #eff3f5;
+  gap: 4px;
+
+  input {
+    all: unset;
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    color: #333333;
+  }
+}
