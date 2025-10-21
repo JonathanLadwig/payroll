@@ -1,0 +1,73 @@
+{
+    "employee": {
+        "id": "E008",
+        "name": "Hannah Smoterich-Barrett",
+        "team": "General worker",
+        "summary": {
+            "totalEarnings": 13140.68,
+            "totalDeductions": 12000.00,
+            "netTotal": 1140.68,
+            "uif": 35.32,
+            "paye": 0.00,
+            "total": 35.32
+        },
+        "earnings": [
+            {
+                "name": "Drafting",
+                "description": "Lorem ipsum dolor",
+                "type": "Group 1",
+                "quantity": 3,
+                "rate": "R20.00"
+            },
+            {
+                "name": "Driving",
+                "description": "--",
+                "type": "Group 1",
+                "quantity": 4,
+                "rate": "--"
+            },
+            {
+                "name": "Cutting",
+                "description": "--",
+                "type": "Group 2",
+                "quantity": 6,
+                "rate": "--"
+            },
+            {
+                "name": "Task 1",
+                "description": "Lorem ipsum dolor",
+                "type": "Group 3",
+                "quantity": 3,
+                "rate": "R400.00"
+            },
+            {
+                "name": "Task 2",
+                "description": "-",
+                "type": "Group 2",
+                "quantity": 4,
+                "rate": "R599.00"
+            },
+            {
+                "name": "Task 3",
+                "description": "Lorem ipsum dolor",
+                "type": "Group 3",
+                "quantity": 6,
+                "rate": "R60.00"
+            },
+            {
+                "name": "Task 4",
+                "description": "Lorem ipsum dolor",
+                "type": "Group 2",
+                "quantity": 3,
+                "rate": "R80.00"
+            },
+            {
+                "name": "Task 5",
+                "description": "Lorem ipsum dolor",
+                "type": "Group 1",
+                "quantity": 4,
+                "rate": "R100.00"
+            }
+        ]
+    }
+}
