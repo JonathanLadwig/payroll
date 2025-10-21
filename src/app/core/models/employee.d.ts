@@ -1,7 +1,10 @@
-export interface Employee {
+export interface BasicEmployee {
     id: string
     name: string
     team: string
+}
+
+export interface Employee extends BasicEmployee {
     summary: Summary
     earnings: Earning[]
 }

@@ -21,6 +21,24 @@ export class PayrollService {
       )
   });
 
+  employeeBasicInfo = computed(() => {
+    const employee = this.employeeData.value();
+    if (!employee) {
+      return null;
+    }
+
+    return {
+      name: employee.name,
+      id: employee.id,
+      team: employee.team
+    };
+  });
+
+  employeeSummary = computed(() => {
+    const employee = this.employeeData.value();
+    return employee ? employee.summary : null;
+  });
+
   employeeEarnings = computed<Earning[]>(() => {
     const employee = this.employeeData.value();
     if (!employee) {

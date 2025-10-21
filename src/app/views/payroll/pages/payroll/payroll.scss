@@ -1,0 +1,17 @@
+.payroll {
+  box-sizing: border-box;
+  padding: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  .table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 16px 8px;
+  }
+}
