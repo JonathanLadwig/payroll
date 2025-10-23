@@ -57,119 +57,78 @@ ng test
 
 ## Challenges
 
-### Challenge 1: [Table-styling]
+### Challenge 1: Table-styling
 
-- **Problem:** [Tables are finicky to style correctly. At first no borders or border radius was working.]
-- **Solution:** [Setting border-collapse: separate; as well as styling first child and last child rather than the tbody worked]
-- **Learning:** [How to better style tables with custom style]
+- **Problem:** Tables are finicky to style correctly. At first no borders or border radius was working.
+- **Solution:** Setting border-collapse: separate; as well as styling first child and last child rather than the tbody worked
+- **Learning:** How to better style tables with custom style
 
-### Challenge 2: [Table-ordering-styling]
+### Challenge 2: Table-ordering-styling
 
-- **Problem:** [The table has an asc desc icon next to it on the active th. It needed specialised styling and also make sure it didn't have layout shift]
-- **Solution:** [Created a custom component just for table headings with input signals to adjust styling]
-- **Learning:** [When to use a smaller custom child component rather than make the parent more complex]
+- **Problem:** The table has an asc desc icon next to it on the active th. It needed specialised styling and also make sure it didn't have layout shift
+- **Solution:** Created a custom component just for table headings with input signals to adjust styling
+- **Learning:** When to use a smaller custom child component rather than make the parent more complex
 
 ## Improvements
 
 Given more time, I would implement the following improvements:
 
-1. **[Feature/Improvement 1]**
+1. **Better Value Sorting**
 
-   - Description: [What would be added/changed]
-   - Benefit: [How this would improve the application]
+   - Description: Curently sorting includes empty values in it, filtering them to the bottom for sorting would be better
+   - Benefit: No more empty values appearing at the top during sorting
 
-2. **[Feature/Improvement 2]**
+2. **Pagination for Large Datasets**
 
-   - Description: [What would be added/changed]
-   - Benefit: [How this would improve the application]
+   - Description: Pagination to display a limited number of records per page with controls to navigate between pages
+   - Benefit: It would enhance performance and usability when dealing with hundreds or thousands of employee records, but then ideally sorting and searching would need to be done on the backend.
 
-3. **[Feature/Improvement 3]**
-   - Description: [What would be added/changed]
-   - Benefit: [How this would improve the application]
+3. **Better Accessibility**
+   - Description: Since I was under time constraints I didn't always implement the correct html elements or aria-labels
+   - Benefit: Good html semantics help accessibility through screen readers and keyboard navigatiion. They also helo with SEO, which is not applicable in this application.
 
 ## AI Tool Usage Reflection
 
 ### What/Which Tools
 
-- **GitHub Copilot**: [Version/Configuration]
-- **[Other AI Tool]**: [If applicable]
+- **GitHub Copilot**
+- **ChatGPT**
 
 ### Why/Where
 
 #### Boilerplate Code Generation
 
-- Used for: [Describe specific instances]
-- Reasoning: [Why you chose to use AI here]
+- Used for: Generating the base html templates and empty nested scss
+- Reasoning: It is a huge timesaver and as long as its prmpoted right does a good job. The empty nested scss especially is a huge timesaver and ensures every element/class is taken into account.
 
 #### Logic Implementation
 
-- Used for: [Describe specific instances]
-- Reasoning: [Why you chose to use AI here]
+- Used for: Sorting and filtering the earnings signal
+- Reasoning: It's a common task and the AI handles it well enough
 
 #### Debugging & Problem Solving
 
-- Used for: [Describe specific instances]
-- Reasoning: [Why you chose to use AI here]
-
-#### Documentation & Comments
-
-- Used for: [Describe specific instances]
-- Reasoning: [Why you chose to use AI here]
+- Used for: Correcting resource 401 failure
+- Reasoning: In a time sensitive task I didn't have the time to debug it manually
 
 ### Critique
 
+AI does not handle modern angular techniques well and still uses old syntax (like ngFor) when generating code unless given some reference to modern best practices. It also does not take into account the correct HTML semantics all the time (like when to use <a> versus a <button>), since it trained off popular code, not always correct code. AI also currently is lackluster at styling. If you need a product to match a specific design you need to manually style it.
+
 #### Where AI Excelled
 
-- **Time Savings:** [Specific examples where AI significantly sped up development]
-- **Code Quality:** [Examples where AI produced good, clean code]
-- **Learning Aid:** [How AI helped you understand new concepts or patterns]
+- **Time Savings:** SCSS and HTML generation
+- **Code Quality:** Sorting and filtering in computed signals it handled well
+- **Learning Aid:** None provided in this assessment, but a 'best practices' md file helps.
 
 #### Where AI Fell Short
 
-- **Incorrect Code:** [Examples where AI generated buggy or incorrect code]
-- **Context Limitations:** [Situations where AI didn't understand the broader context]
-- **Manual Corrections:** [Specific instances requiring significant refactoring]
+- **Incorrect Code:** Generating rxResources is something it repeatidly struggles with
+- **Context Limitations:** Copilot does not have access to images outside the project for reference
+- **Manual Corrections:** Using modern angular syntax, correcting html elements to best practice semantics
 
 #### Overall Assessment
 
-[Your overall thoughts on using AI tools for this project - was it beneficial? Would you use it again? What would you do differently?]
+AI is great at generating base code For implementing modern angular code it is still best to correct manually, or give the AI a 'best practice' document to better implement code. You could also theoretically train a LORA on the best practices which would help with code quality. As far as styling goes this is AI's greatest weakpoint. It generates based on guesses and estimates, which frequently produce incorrect unresponsive UI's.
 
 ---
-
-## Development Information
-
-### Code Scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-### Running Unit Tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-### Running End-to-End Tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
